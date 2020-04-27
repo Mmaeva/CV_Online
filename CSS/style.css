@@ -39,9 +39,14 @@ img{
     border-radius: 100%;
     box-shadow: 0px 0px 2px 3px #888844;
 }
-a{
-    color: indigo;                   
+a:link{
+    color: indigo;
+    text-decoration: none;                   
 }
+a:hover {
+    color: rgb(12, 88, 22);
+    text-decoration: underline;
+}  
 .l-title{                         /****Début information contact LEFT*/
     background-color:  #77773c;
     font-size: large;
@@ -55,14 +60,22 @@ a{
     margin: 20px 30px;
     text-align: justify;
 }
+.text-position2{
+    margin: 20px 30px;
+    text-align: justify;
+    margin-bottom: 150px;
+}
+.colorPurple{
+    color: #162e02;
+    font-weight: bold;
+}
 #info{
 font-family: 'robotomedium',Arial, Helvetica, sans-serif;
 }
-.icon-loisir{
+#icon-loisir{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-bottom: 30px;
     font-size: 30px;
     color: #404040;
 }
@@ -111,6 +124,7 @@ h6{
     display:block;
     margin-top: -18px;
     margin-bottom: -10px;
+    font-family: 'robotomedium', Arial, Helvetica, sans-serif;
 }
 .icons-illustration{
     font-size: 30px;
@@ -146,7 +160,7 @@ span.block{
 }
 .backrow{
     width: 300px;
-    word-wrap: break-word;
+    text-align: left;
 }
 .title-container > div,h4.r-title{
     display: inline-block;
@@ -159,12 +173,17 @@ span.block{
 .mediumfont{
     font-family: 'robotomedium', Arial, Helvetica, sans-serif
 }
+#recommandation > div{
+    margin-bottom: 50px;
+}
 #inline{
     line-height: 20px;
     margin-top:0px;
+    text-align: center;
 }
 #name{
    margin-bottom: 5px; 
+   text-align: center;
 }
 #responsive-info{
     display: none;
@@ -176,6 +195,12 @@ span.block{
     display: none;
 }
 #resp-info2{
+    display: none;
+}
+h5 > br{
+    display: none;
+}
+h6 > br{
     display: none;
 }
 
@@ -224,7 +249,10 @@ span.block{
     }
     .backrow{
         width: 200px;
-    }   
+    } 
+    .colorGreen{
+        color: #888844;
+    }  
     #responsive-photo{
         display:flex;
         margin-right: 18px;
@@ -251,6 +279,12 @@ span.block{
         margin: 10px -5px 0px;
         padding-bottom: 5px;
     }    
+    h5 > br{
+        display: initial;
+    }
+    h6 > br{
+        display: initial;
+    }
 }
 @media all and (max-device-width:320px) /*responsive telephone w/ small resol*/
 {
@@ -261,5 +295,15 @@ span.block{
         display: flex;
         justify-content: space-between;
         margin-top: 25px;
+    }
+    .content-detail{
+        text-align: left;
+        width: 190px;
+    }
+    h5 > br{
+        display: initial;
+    }
+    h6 > br{
+        display: initial;
     }
 }
